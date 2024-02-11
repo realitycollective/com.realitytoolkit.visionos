@@ -7,23 +7,23 @@ using RealityCollective.ServiceFramework.Services;
 using System.Linq;
 using UnityEditor;
 
-namespace RealityToolkit.UPMTEMPLATE.Editor
+namespace RealityToolkit.VisionOS.Editor
 {
     /// <summary>
-    /// Installs <see cref="IUPMTEMPLATEModule"/>s coming from a third party package
-    /// into the <see cref="UPMTEMPLATEProfile"/> in the <see cref="ServiceManager.ActiveProfile"/>.
+    /// Installs <see cref="IVisionOSModule"/>s coming from a third party package
+    /// into the <see cref="VisionOSProfile"/> in the <see cref="ServiceManager.ActiveProfile"/>.
     /// </summary>
     [InitializeOnLoad]
-    public sealed class UPMTEMPLATEPackageModulesInstaller : IPackageModulesInstaller
+    public sealed class VisionOSPackageModulesInstaller : IPackageModulesInstaller
     {
         /// <summary>
         /// Static initializer for the installer instance.
         /// </summary>
-        static UPMTEMPLATEPackageModulesInstaller()
+        static VisionOSPackageModulesInstaller()
         {
             if (Instance == null)
             {
-                Instance = new UPMTEMPLATEPackageModulesInstaller();
+                Instance = new VisionOSPackageModulesInstaller();
             }
 
             PackageInstaller.RegisterModulesInstaller(Instance);
@@ -32,7 +32,7 @@ namespace RealityToolkit.UPMTEMPLATE.Editor
         /// <summary>
         /// Internal singleton instance of the installer.
         /// </summary>
-        private static UPMTEMPLATEPackageModulesInstaller Instance { get; }
+        private static VisionOSPackageModulesInstaller Instance { get; }
 
         /// <inheritdoc/>
         public bool Install(ServiceConfiguration serviceConfiguration)
@@ -41,16 +41,16 @@ namespace RealityToolkit.UPMTEMPLATE.Editor
 -------------------------------------------------------
 TO install modules for the service, uncomment the code below.
 
-Note, in order to correctly assign modules for the service, you need to replace the following (Where UPMTEMPLATE is the service name used to generate this repository):
+Note, in order to correctly assign modules for the service, you need to replace the following (Where VisionOS is the service name used to generate this repository):
 
-- UPMTEMPLATE with the correct service type.
-- UPMTEMPLATEModule with the correct module type.
-- IUPMTEMPLATEModule with the correct module interface.
-- UPMTEMPLATEProfile with the correct profile type.
+- VisionOS with the correct service type.
+- VisionOSModule with the correct module type.
+- IVisionOSModule with the correct module interface.
+- VisionOSProfile with the correct profile type.
 
 These are collated from the service and module definitions generated using the Service Template Generator
 -------------------------------------------------------
-            if (!typeof(IUPMTEMPLATEModule).IsAssignableFrom(serviceConfiguration.InstancedType.Type))
+            if (!typeof(IVisionOSModule).IsAssignableFrom(serviceConfiguration.InstancedType.Type))
             {
                 // This module installer does not accept the configuration type.
                 return false;
@@ -68,24 +68,24 @@ These are collated from the service and module definitions generated using the S
                 return false;
             }
 
-            if (!ServiceManager.Instance.TryGetServiceProfile<IUPMTEMPLATE, UPMTEMPLATEProfile>(out var UPMTEMPLATEProfile))
+            if (!ServiceManager.Instance.TryGetServiceProfile<IVisionOS, VisionOSProfile>(out var VisionOSProfile))
             {
-                UnityEngine.Debug.LogWarning($"Could not install {serviceConfiguration.InstancedType.Type.Name}.{nameof(UPMTEMPLATEProfile)} not found.");
+                UnityEngine.Debug.LogWarning($"Could not install {serviceConfiguration.InstancedType.Type.Name}.{nameof(VisionOSProfile)} not found.");
                 return false;
             }
 
             // Setup the configuration.
-            var typedServiceConfiguration = new ServiceConfiguration<IUPMTEMPLATEModule>(serviceConfiguration.InstancedType.Type, serviceConfiguration.Name, serviceConfiguration.Priority, serviceConfiguration.RuntimePlatforms, serviceConfiguration.Profile);
+            var typedServiceConfiguration = new ServiceConfiguration<IVisionOSModule>(serviceConfiguration.InstancedType.Type, serviceConfiguration.Name, serviceConfiguration.Priority, serviceConfiguration.RuntimePlatforms, serviceConfiguration.Profile);
 
             // Make sure it is not already in the target profile.
-            if (UPMTEMPLATEProfile.ServiceConfigurations.All(sc => sc.InstancedType.Type != serviceConfiguration.InstancedType.Type))
+            if (VisionOSProfile.ServiceConfigurations.All(sc => sc.InstancedType.Type != serviceConfiguration.InstancedType.Type))
             {
-                UPMTEMPLATEProfile.AddConfiguration(typedServiceConfiguration);
-                UnityEngine.Debug.Log($"Successfully installed the {serviceConfiguration.InstancedType.Type.Name} to {UPMTEMPLATEProfile.name}.");
+                VisionOSProfile.AddConfiguration(typedServiceConfiguration);
+                UnityEngine.Debug.Log($"Successfully installed the {serviceConfiguration.InstancedType.Type.Name} to {VisionOSProfile.name}.");
             }
             else
             {
-                UnityEngine.Debug.Log($"Skipped installing the {serviceConfiguration.InstancedType.Type.Name} to {UPMTEMPLATEProfile.name}. Already installed.");
+                UnityEngine.Debug.Log($"Skipped installing the {serviceConfiguration.InstancedType.Type.Name} to {VisionOSProfile.name}. Already installed.");
             }
 */
             return true;

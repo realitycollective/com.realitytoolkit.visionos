@@ -1,23 +1,25 @@
 {
-  "name": "com.realitytoolkit.UPMTEMPLATE",
-  "displayName": "RealityToolkit.UPMTEMPLATE",
-  "description": "The UPMTEMPLATE framework of the Reality Toolkit by the Reality Collective",
+  "name": "com.realitytoolkit.visionos",
+  "displayName": "RealityToolkit.visionOS",
+  "description": "The visionOS framework of the Reality Toolkit by the Reality Collective",
   "keywords": [
     "VR",
     "AR",
     "XR",
-    "Mixed Reality"
+    "Mixed Reality",
+    "Apple",
+    "Vision Pro"
   ],
   "version": "1.0.0-pre.0",
-  "unity": "2021.3",
+  "unity": "2022.3",
   "homepage": "https://github.com/realitycollective",
   "bugs": {
-    "url": "https://github.com/realitycollective/com.realitytoolkit.UPMTEMPLATE/issues"
+    "url": "https://github.com/realitycollective/com.realitytoolkit.visionos/issues"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/realitycollective/com.realitytoolkit.UPMTEMPLATE"
+    "url": "git+https://github.com/realitycollective/com.realitytoolkit.visionos"
   },
   "author": {
     "name": "Reality Collective",
@@ -25,7 +27,8 @@
     "url": "https://github.com/realitycollective"
   },
   "dependencies": {
-    "com.realitytoolkit.core": "1.0.0-pre.37"
+    "com.realitytoolkit.core": "1.0.0-pre.37",
+    "com.realitytoolkit.player": "1.0.3-pre.1"
   },
   "assets": [
     {
