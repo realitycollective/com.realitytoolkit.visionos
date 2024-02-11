@@ -1,12 +1,12 @@
-// Copyright (c) Reality Collective. All rights reserved.
+﻿// Copyright (c) Reality Collective. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using System.IO;
 using RealityCollective.Editor.Utilities;
 using RealityCollective.Extensions;
 using RealityCollective.ServiceFramework.Editor;
 using RealityCollective.ServiceFramework.Editor.Packages;
 using RealityToolkit.Editor;
-using System.IO;
 using UnityEditor;
 using UnityEngine;
 
@@ -23,13 +23,13 @@ namespace RealityToolkit.VisionOS.Editor
             EditorApplication.delayCall += CheckPackage;
         }
 
-        [MenuItem(RealityToolkitPreferences.Editor_Menu_Keyword + "/Packages/Install VisionOS Package Assets...", true)]
+        [MenuItem(RealityToolkitPreferences.Editor_Menu_Keyword + "/Packages/Install visionOS Package Assets...", true)]
         private static bool ImportPackageAssetsValidation()
         {
             return !Directory.Exists($"{destinationPath}{Path.DirectorySeparatorChar}");
         }
 
-        [MenuItem(RealityToolkitPreferences.Editor_Menu_Keyword + "/Packages/Install VisionOS Package Assets...")]
+        [MenuItem(RealityToolkitPreferences.Editor_Menu_Keyword + "/Packages/Install visionOS Package Assets...")]
         private static void ImportPackageAssets()
         {
             EditorPreferences.Set($"{nameof(VisionOSPackageInstaller)}.Assets", false);

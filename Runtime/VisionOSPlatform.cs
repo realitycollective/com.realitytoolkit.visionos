@@ -1,9 +1,8 @@
-// Copyright (c) Reality Collective. All rights reserved.
+﻿// Copyright (c) Reality Collective. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
-using RealityCollective.ServiceFramework.Definitions.Platforms;
-using RealityCollective.ServiceFramework.Interfaces;
 using System.Collections.Generic;
+using RealityCollective.ServiceFramework.Definitions.Platforms;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -18,18 +17,6 @@ namespace RealityToolkit.VisionOS
         private const string xrDisplaySubsystemDescriptorId = "visionOS Display";
         private const string xrInputSubsystemDescriptorId = "visionOS Input";
 
-        /// <inheritdoc />
-        public override IPlatform[] PlatformOverrides { get; } =
-        {
-            //new AndroidPlatform()
-            //new WindowsStandalonePlatform()
-		};
-/*		
-		Choose a path for Is Platform available at runtime
-        /// <inheritdoc />
-        public override bool IsAvailable =>
-            !Application.isEditor && VisionOSApi.Version > NoVersion && VisionOSApi.Initialized;		
-*/
         /// <inheritdoc />
         public override bool IsAvailable
         {
@@ -87,11 +74,7 @@ namespace RealityToolkit.VisionOS
         /// <inheritdoc />
         public override UnityEditor.BuildTarget[] ValidBuildTargets { get; } =
         {
-			//Choose which Platforms this runtime is available for in the Editor
-            //UnityEditor.BuildTarget.Android
-			//UnityEditor.BuildTarget.WSAPlayer
-            //UnityEditor.BuildTarget.StandaloneWindows64,
-            //UnityEditor.BuildTarget.StandaloneWindows			
+            //UnityEditor.BuildTarget.visionOS
         };
 #endif
     }
