@@ -1,7 +1,7 @@
 {
   "name": "com.realitytoolkit.visionos",
   "displayName": "RealityToolkit.VisionOS",
-  "description": "The visionOS framework of the Reality Toolkit by the Reality Collective",
+  "description": "The visionOS platform components for the Reality Toolkit. This package enables your Reality Toolkit based project to run on visionOS devices.",
   "keywords": [
     "VR",
     "AR",
@@ -28,7 +28,8 @@
   },
   "dependencies": {
     "com.realitytoolkit.core": "1.0.0-pre.39",
-    "com.realitytoolkit.player": "1.0.4-pre.1"
+    "com.realitytoolkit.player": "1.0.4-pre.1",
+    "com.unity.xr.visionos": "1.1.4"
   },
   "assets": [
     {
