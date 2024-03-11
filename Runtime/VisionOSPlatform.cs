@@ -1,8 +1,8 @@
 ﻿// Copyright (c) Reality Collective. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
-using System.Collections.Generic;
 using RealityCollective.ServiceFramework.Definitions.Platforms;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -14,8 +14,8 @@ namespace RealityToolkit.VisionOS
     [System.Runtime.InteropServices.Guid("ff382950-9384-41fd-8617-48d0b6573a94")]
     public class VisionOSPlatform : BasePlatform
     {
-        private const string xrDisplaySubsystemDescriptorId = "visionOS Display";
-        private const string xrInputSubsystemDescriptorId = "visionOS Input";
+        private const string xrDisplaySubsystemDescriptorId = "VisionOS-Display";
+        private const string xrInputSubsystemDescriptorId = "VisionOS-Input";
 
         /// <inheritdoc />
         public override bool IsAvailable
