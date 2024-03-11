@@ -7,7 +7,10 @@
         "GUID:b2d046948d6452a4b8485efc9ce0f88c",
         "GUID:de07d9dfb71843b46aa2c474f73ca4cc"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor",
+        "VisionOS"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
