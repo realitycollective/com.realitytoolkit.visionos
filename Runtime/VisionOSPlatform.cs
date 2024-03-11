@@ -74,7 +74,7 @@ namespace RealityToolkit.VisionOS
         /// <inheritdoc />
         public override UnityEditor.BuildTarget[] ValidBuildTargets { get; } =
         {
-            //UnityEditor.BuildTarget.visionOS
+            UnityEditor.BuildTarget.VisionOS
         };
 #endif
     }
