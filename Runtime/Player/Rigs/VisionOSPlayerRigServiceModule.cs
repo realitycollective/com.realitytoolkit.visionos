@@ -2,11 +2,11 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using RealityCollective.ServiceFramework.Attributes;
-using RealityToolkit.Player.Interfaces;
-using RealityToolkit.Player.Modules;
+using RealityToolkit.Player;
+using RealityToolkit.Player.Rigs;
 using UnityEngine;
 
-namespace RealityToolkit.VisionOS.Player
+namespace RealityToolkit.VisionOS.Player.Rigs
 {
     /// <summary>
     /// <see cref="IPlayerRigServiceModule"/> used when running on the <see cref="VisionOSPlatform"/>.
