@@ -2,7 +2,7 @@
   "name": "com.realitytoolkit.visionos",
   "displayName": "RealityToolkit.VisionOS",
   "description": "The visionOS platform components for the Reality Toolkit. This package enables your Reality Toolkit based project to run on visionOS devices.",
-  "version": "1.0.0-pre.0",
+  "version": "1.0.0-pre.1",
   "documentationUrl": "https://realitytoolkit.io",
   "changelogUrl": "https://github.com/realitycollective/com.realitytoolkit.visionos/releases",
   "licensesUrl": "https://github.com/realitycollective/com.realitytoolkit.visionos/blob/main/LICENSE.md",
