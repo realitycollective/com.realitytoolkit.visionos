@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da64fb88269149f8a95f1fb969d6a0b4, type: 3}
+  m_Name: VisionOSPackageInstallerProfile
+  m_EditorClassIdentifier: 
+  platformEntries:
+    runtimePlatforms:
+    - reference: ff382950-9384-41fd-8617-48d0b6573a94
+  configurations:
+  - instancedType:
+      reference: 4ed59a54-7d07-4abf-929a-2350d26be9e7
+    name: VisionOS Player Rig Service Module
+    priority: 0
+    profile: {fileID: 11400000, guid: 0fe80e76c2c0d7c44b9a28f0f0ab5a9e, type: 2}
+    platformEntries:
+      runtimePlatforms:
+      - reference: ff382950-9384-41fd-8617-48d0b6573a94
