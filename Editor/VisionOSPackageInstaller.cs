@@ -6,16 +6,16 @@ using RealityCollective.ServiceFramework.Editor.Packages;
 using RealityCollective.Utilities.Editor;
 using RealityCollective.Utilities.Extensions;
 using RealityToolkit.Editor;
+using RealityToolkit.Editor.Settings;
 using System.IO;
 using UnityEditor;
-using UnityEngine;
 
 namespace RealityToolkit.VisionOS.Editor
 {
     [InitializeOnLoad]
     internal static class VisionOSPackageInstaller
     {
-        private static readonly string destinationPath = Application.dataPath + "/RealityToolkit.Generated/VisionOS";
+        private static readonly string destinationPath = Path.Combine(RealityToolkitEditorSettings.Instance.AssetImportPath, "VisionOS");
         private static readonly string sourcePath = Path.GetFullPath($"{PathFinderUtility.ResolvePath<IPathFinder>(typeof(VisionOSPackagePathFinder)).ForwardSlashes()}{Path.DirectorySeparatorChar}{"Assets~"}");
 
         static VisionOSPackageInstaller()
