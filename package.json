@@ -3,7 +3,7 @@
   "displayName": "RealityToolkit.VisionOS",
   "description": "The visionOS platform components for the Reality Toolkit. This package enables your Reality Toolkit based project to run on visionOS devices.",
   "version": "1.0.0-pre.2",
-  "documentationUrl": "https://realitytoolkit.io",
+  "documentationUrl": "https://realitytoolkit.realitycollective.net/",
   "changelogUrl": "https://github.com/realitycollective/com.realitytoolkit.visionos/releases",
   "licensesUrl": "https://github.com/realitycollective/com.realitytoolkit.visionos/blob/main/LICENSE.md",
   "keywords": [
@@ -15,7 +15,7 @@
     "Vision Pro"
   ],
   "unity": "2022.3",
-  "homepage": "https://realitytoolkit.io",
+  "homepage": "https://realitytoolkit.realitycollective.net/",
   "bugs": {
     "url": "https://github.com/realitycollective/com.realitytoolkit.visionos/issues"
   },
@@ -33,8 +33,8 @@
     "registry": "https://package.openupm.com"
   },
   "dependencies": {
-    "com.realitytoolkit.core": "1.0.0-pre.48",
-    "com.realitytoolkit.player": "1.0.4",
+    "com.realitytoolkit.core": "1.0.0-pre.72",
+    "com.realitytoolkit.player": "1.0.5",
     "com.unity.xr.visionos": "1.1.4"
   },
   "assets": [
